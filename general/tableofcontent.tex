@@ -1,32 +1,31 @@
-% --- Inhaltsverzeichnis ---
+% table of contents
 \pdfbookmark[section]{\contentsname}{toc}
 \tableofcontents
 
 \clearpage
-% --- Abbildungsverzeichnis --
+% figures
 \phantomsection
 \addcontentsline{toc}{subsection}{Abbildungsverzeichnis}
 \listoffigures
 
-% --- Tabellenverzeichnis ---
+% tables
 \phantomsection
 \addcontentsline{toc}{subsection}{Tabellenverzeichnis}
 \listoftables
 
-% --- Listing Verzeichnis --- % #INFO: Verwende ich gerade nicht
+% listings
 \phantomsection
 \addcontentsline{toc}{subsection}{Codeausschnittsverzeichnis}
 \lstlistoflistings
 
-% --- Glossar ---
-\iffalse % #INFO: auf \iftrue setzen falls man ein Glossar will
+% glossary
+\iffalse
 \phantomsection
 \addcontentsline{toc}{subsection}{Glossar}
-\printnoidxglossary[sort=word,title=Glossar] % main glossary
+\printnoidxglossary[sort=word,title=Glossar]
 \fi
 
-% --- Abkürzungen ---
+% acronyms
 \phantomsection
 \addcontentsline{toc}{subsection}{Abkürzungen}
-\printnoidxglossary[type=acronym,title=Abkürzungen] % Abkürzungen
-
+\printnoidxglossary[type=acronym,title=Abkürzungen]
