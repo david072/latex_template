@@ -18,7 +18,7 @@
 \usepackage{lmodern} % high resolution font
 \renewcommand*\familydefault{\sfdefault} % sans-serif font
 % text companion fonts (for symbols like µ, bullet, musical note, etc.)
-\usepackage{textcomp} 
+\usepackage{textcomp}
 
 \usepackage{scrlayer-scrpage}
 \clearpairofpagestyles
@@ -70,8 +70,8 @@
 % from https://tex.stackexchange.com/questions/303465/higher-asterisks-in-lstlisting-environment
 \makeatletter
 \lst@CCPutMacro
-    \lst@ProcessOther {"2A}{\raisebox{2pt}{*}}
-    \@empty\z@\@empty
+\lst@ProcessOther {"2A}{\raisebox{2pt}{*}}
+\@empty\z@\@empty
 \makeatother
 
 % modified version of IEEEtran with support for online sources (url and date)
@@ -114,20 +114,20 @@
 \makenoidxglossaries
 
 \usepackage[
-	hidelinks,              % Das Links nicht farbig
-	bookmarks,              % Bookmarks erstellen
-	bookmarksopen,          % Bookmarks bei öffnen des PDF anzeigen
-	bookmarksnumbered,      % damit Nummern in Bookmarks
-	bookmarksopenlevel = 1, % damit nur die erste Ebene der Bookmarks beim öffnen angezeigt werden
-	pdftoolbar = false,
-	pdfmenubar = false,
-	pdftitle={		\myDocumentType~über~\myTitle~von~\myName},
-	pdfsubject={}
-	pdfkeywords={}
-	pdfauthor = {		\myName},
-	pdfstartpage = {	1}
+    hidelinks,              % Das Links nicht farbig
+    bookmarks,              % Bookmarks erstellen
+    bookmarksopen,          % Bookmarks bei öffnen des PDF anzeigen
+    bookmarksnumbered,      % damit Nummern in Bookmarks
+    bookmarksopenlevel = 1, % damit nur die erste Ebene der Bookmarks beim öffnen angezeigt werden
+    pdftoolbar = false,
+    pdfmenubar = false,
+    pdftitle={		\myDocumentType~über~\myTitle~von~\myName},
+    pdfsubject={},
+    pdfkeywords={},
+    pdfauthor = {		\myName},
+    pdfstartpage = {	1}
 ]{hyperref}
-    
+
 % set names of references for \autoref (i.e. subsection => "Abschnitt")
 \addto\extrasngerman{\def\subsectionautorefname{Abschnitt}}
 \addto\extrasngerman{\def\subsubsectionautorefname{Abschnitt}}

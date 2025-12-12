@@ -6,7 +6,7 @@
 \subsubsection{Zitieren} \label{sssec:zitieren}
 
 Zitieren \cite[s. 31]{usb_developer_guide} angeschlossen werden, die sich auf Stern-Sternnetzten, mit zu 7 Ebenen \cite[4.1.1]{usb_developer_guide}, aufteilen können. Der Steckplatz von einem Hub zum Host, als upstream port bezeichnet, Buchsen für Peripheriegeräten oder weiter Hubs als downstream ports \cite{AboutBlitzerDe}.
-Die Struktur einer logischen Verbindung von Host zu einem Slave ist in \autoref{fig:usb_pipe_modell} 
+Die Struktur einer logischen Verbindung von Host zu einem Slave ist in \autoref{fig:usb_pipe_modell}
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.75\textwidth,height=6cm,keepaspectratio=true]{content/images/Cypress_ubs_figure_1.PNG}
@@ -49,35 +49,35 @@ Im  device descriptor werden allgemeine Informationen für ein Gerät bereitgest
     \centering
     \begin{tabular}{|l|l|}
         \hline
-        \textbf{Feld}      & \textbf{Bedeutung}                                 \\
+        \textbf{Feld}      & \textbf{Bedeutung}                                      \\
         \hline
-        bLength            & Länge des descriptor               \\
+        bLength            & Länge des descriptor                                    \\
         \hline
-        bDescriptorType    & descriptor Type, hier DEVICE (0x01)                 \\
+        bDescriptorType    & descriptor Type, hier DEVICE (0x01)                     \\
         \hline
-        bcdUSB             & \acrshort{usb} Spezifikationsversion als \acrshort{bcd}                   \\
+        bcdUSB             & \acrshort{usb} Spezifikationsversion als \acrshort{bcd} \\
         \hline
-        bDeviceClass       & device class                                       \\
+        bDeviceClass       & device class                                            \\
         \hline
-        bDeviceSubClass    & device subclass                                    \\
+        bDeviceSubClass    & device subclass                                         \\
         \hline
-        bDeviceProtocol    & Device Protocol                                    \\
+        bDeviceProtocol    & Device Protocol                                         \\
         \hline
-        bMaxPacketSize     & Maximale Packet Größe für endpoint 0               \\
+        bMaxPacketSize     & Maximale Packet Größe für endpoint 0                    \\
         \hline
-        idVendor           & \acrfull{vid}, vergeben durch \acrshort{usbif}        \\ % typo
+        idVendor           & \acrfull{vid}, vergeben durch \acrshort{usbif}          \\ % typo
         \hline
-        idProduct          & \acrfull{produkt_id}, vergeben durch den Hersteller   \\
+        idProduct          & \acrfull{produkt_id}, vergeben durch den Hersteller     \\
         \hline
-        bcdDevice          & Geräteversion als \acrshort{bcd}                              \\
+        bcdDevice          & Geräteversion als \acrshort{bcd}                        \\
         \hline
-        iManufacturer      & Position der Herstellerbezeichnung in Packet       \\
+        iManufacturer      & Position der Herstellerbezeichnung in Packet            \\
         \hline
-        iProduct           & Position der Gerätebezeichnung in Packet           \\
+        iProduct           & Position der Gerätebezeichnung in Packet                \\
         \hline
-        iSerialNumber      & Position der Seriennummer in Packet                \\
+        iSerialNumber      & Position der Seriennummer in Packet                     \\
         \hline
-        bNumConfigurations & Anzahl der unterschiedlichen Gerätekonfiguration   \\
+        bNumConfigurations & Anzahl der unterschiedlichen Gerätekonfiguration        \\
         \hline
     \end{tabular}
     \caption{device descriptor}
