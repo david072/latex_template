@@ -1,14 +1,14 @@
 %% KOMA
 
 \usepackage[
-    paper=a4paper,
-    left=25mm,
-    right=25mm,
-    top=25mm,
-    bottom=20mm,
-    includefoot,
-    foot=\baselineskip,
-    bindingoffset=0mm
+  paper=a4paper,
+  left=25mm,
+  right=25mm,
+  top=25mm,
+  bottom=20mm,
+  includefoot,
+  foot=\baselineskip,
+  bindingoffset=0mm
 ]{geometry}
 
 \usepackage[utf8]{inputenc} % encoding
@@ -27,9 +27,9 @@
 \setkomafont{pagination}{}
 
 \KOMAoptions{
-    headsepline = true,
-    footsepline = false,
-    plainfootsepline = false
+  headsepline = true,
+  footsepline = false,
+  plainfootsepline = false
 }
 \renewcommand*{\sectionmarkformat}{}
 
@@ -40,7 +40,9 @@
 \ofoot*{\pagemark}
 
 \usepackage{scrdate} % date handling
-\usepackage{scrhack} % included because \float@listhead is not supported anymore http://www.bakoma-tex.com/doc/latex/koma-script/scrhack.pdf page 3
+\usepackage{scrhack} % included because \float@listhead is not
+% supported anymore
+% http://www.bakoma-tex.com/doc/latex/koma-script/scrhack.pdf page 3
 
 %% other packages
 
@@ -60,14 +62,15 @@
 % TODO: probably use minted instead, might not be necessary then?
 \usepackage{listings}
 \lstset{
-    basicstyle=\footnotesize, % Global Code Style
-    numbers=left,
-    numberstyle=\tiny,
-    columns=flexible,
-    breaklines=true,
-    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+  basicstyle=\footnotesize, % Global Code Style
+  numbers=left,
+  numberstyle=\tiny,
+  columns=flexible,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
 }
-% from https://tex.stackexchange.com/questions/303465/higher-asterisks-in-lstlisting-environment
+% from
+% https://tex.stackexchange.com/questions/303465/higher-asterisks-in-lstlisting-environment
 \makeatletter
 \lst@CCPutMacro
 \lst@ProcessOther {"2A}{\raisebox{2pt}{*}}
@@ -76,7 +79,9 @@
 
 % modified version of IEEEtran with support for online sources (url and date)
 % => register as @misc and add url = {...} and optionally urldate = {...}
-\bibliographystyle{IEEEtran_online}
+% \bibliographystyle{IEEEtran_online}
+
+\usepackage[style=ieee,backend=biber]{biblatex}
 
 % better \includegraphics and float objects
 \usepackage{graphicx}
@@ -99,7 +104,8 @@
 \usepackage{subcaption}
 
 % \usepackage{lscape} % placing certain parts of a document in landscape
-% \usepackage{tikz} % creating graphics in latex source using a drawing interface
+% \usepackage{tikz} % creating graphics in latex source using a
+% drawing interface
 % \usepackage{pgfplots} % generating plots in latex source using tikz
 % \pgfplotsset{compat=1.16}
 % \usepackage{pgfplotstable} % loading and displaying tables of numerical data
@@ -110,22 +116,24 @@
 \usepackage{glossary-mcols}
 \setglossarystyle{mcolindex}
 \glsenablehyper % enable hyperlinks to glossary in text
-\renewcommand{\glossarypreamble}{\glsfindwidesttoplevelname[\currentglossary]} % funktioniert nicht mit mcolindex
+\renewcommand{\glossarypreamble}{\glsfindwidesttoplevelname[\currentglossary]}
+% funktioniert nicht mit mcolindex
 \makenoidxglossaries
 
 \usepackage[
-    hidelinks,              % Das Links nicht farbig
-    bookmarks,              % Bookmarks erstellen
-    bookmarksopen,          % Bookmarks bei öffnen des PDF anzeigen
-    bookmarksnumbered,      % damit Nummern in Bookmarks
-    bookmarksopenlevel = 1, % damit nur die erste Ebene der Bookmarks beim öffnen angezeigt werden
-    pdftoolbar = false,
-    pdfmenubar = false,
-    pdftitle={		\myDocumentType~über~\myTitle~von~\myName},
-    pdfsubject={},
-    pdfkeywords={},
-    pdfauthor = {		\myName},
-    pdfstartpage = {	1}
+  hidelinks,              % Das Links nicht farbig
+  bookmarks,              % Bookmarks erstellen
+  bookmarksopen,          % Bookmarks bei öffnen des PDF anzeigen
+  bookmarksnumbered,      % damit Nummern in Bookmarks
+  bookmarksopenlevel = 1, % damit nur die erste Ebene der Bookmarks
+  % beim öffnen angezeigt werden
+  pdftoolbar = false,
+  pdfmenubar = false,
+  pdftitle={    \myDocumentType~über~\myTitle~von~\myName},
+  pdfsubject={},
+  pdfkeywords={},
+  pdfauthor = {    \myName},
+  pdfstartpage = {  1}
 ]{hyperref}
 
 % set names of references for \autoref (i.e. subsection => "Abschnitt")
@@ -143,9 +151,9 @@
 \renewcommand{\appendixpagename}{Anhang}
 \newcommand{\Appendixautorefname}{Anhang}
 \newcommand*\appendixmore{
-    \clearpage
-    %\addsec{{\appendixname}}%
-    \renewcommand{\thesubsection}{{\Alph{subsection}}}
+  \clearpage
+  %\addsec{{\appendixname}}%
+  \renewcommand{\thesubsection}{{\Alph{subsection}}}
 }
 
 \renewcommand{\k}[1]{\textit{#1}}
@@ -163,5 +171,6 @@
 
 % add equation number to the current line (e.g. in "alignat" blocks)
 \newcommand\eqnumberthis{\addtocounter{equation}{1}\tag{\theequation}}
-% define a command alias for a math expression (usage: \newmath{\<name>}{<math>})
+% define a command alias for a math expression (usage:
+% \newmath{\<name>}{<math>})
 \newcommand{\newmath}[2]{\newcommand{#1}{\ensuremath{#2}}}

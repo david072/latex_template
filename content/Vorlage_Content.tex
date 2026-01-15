@@ -5,17 +5,17 @@
 
 \subsubsection{Zitieren} \label{sssec:zitieren}
 
-Zitieren \cite[s. 31]{usb_developer_guide} angeschlossen werden, die sich auf Stern-Sternnetzten, mit zu 7 Ebenen \cite[4.1.1]{usb_developer_guide}, aufteilen können. Der Steckplatz von einem Hub zum Host, als upstream port bezeichnet, Buchsen für Peripheriegeräten oder weiter Hubs als downstream ports \cite{AboutBlitzerDe}.
+Zitieren \autocite[s. 31]{usb_developer_guide} angeschlossen werden, die sich auf Stern-Sternnetzten, mit zu 7 Ebenen \autocite[4.1.1]{usb_developer_guide}, aufteilen können. Der Steckplatz von einem Hub zum Host, als upstream port bezeichnet, Buchsen für Peripheriegeräten oder weiter Hubs als downstream ports \autocite{AboutBlitzerDe}.
 Die Struktur einer logischen Verbindung von Host zu einem Slave ist in \autoref{fig:usb_pipe_modell}
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.75\textwidth,height=6cm,keepaspectratio=true]{content/images/Cypress_ubs_figure_1.PNG}
-    \caption{\acrshort{usb} pipe Modell \cite[Figure~1]{usb_developer_guide}}
+    \caption{\acrshort{usb} pipe Modell \autocite[Figure~1]{usb_developer_guide}}
     \label{fig:usb_pipe_modell}
 \end{figure}
 \par
 Ein endpoints kann entweder die erwähnten Protokollfunktionen bereitstellen, Daten vom Host zu empfangen, dann ist dies ein IN endpoint, oder Daten für den Host bereitzustellen dann ist dies ein OUT endpoint. Diese Terminologie folgt der in der USB Spezifikation verwendete Betrachtung des Bus aus Sicht des Hosts.
-Neben der Richtung eines endpoints, IN oder OUT, werden vier Übertragungsarten \cite[5.4]{usb_developer_guide} unterschieden. Die Übertragungsart wird durch die Gerätekonfiguration für jeden endpoint festleget und wird in \autoref{sssec:endpoints} weiter ausgeführt. Die Funktionen der Übertragungsarten sind \cite[4.7]{usb_developer_guide}:
+Neben der Richtung eines endpoints, IN oder OUT, werden vier Übertragungsarten \autocite[5.4]{usb_developer_guide} unterschieden. Die Übertragungsart wird durch die Gerätekonfiguration für jeden endpoint festleget und wird in \autoref{sssec:endpoints} weiter ausgeführt. Die Funktionen der Übertragungsarten sind \autocite[4.7]{usb_developer_guide}:
 
 \begin{compactitem}
     \item \textbf{control transfer} Für das Übertragen von Konfigurations- und Steuerungsbefehlen über die control pipe.
@@ -29,7 +29,7 @@ Softwareseitig wird die Übertragung in drei Ebenen unterteilt, diese sind in \a
 \begin{figure}[h]
     \centering
     \includegraphics[width=.75\textwidth,keepaspectratio=true]{content/images/usb_spec_figure_5_2.PNG}
-    \caption{\acrshort{usb} Schnittstellen Abstraktion \cite[Figure~5-2]{usb_developer_guide}}
+    \caption{\acrshort{usb} Schnittstellen Abstraktion \autocite[Figure~5-2]{usb_developer_guide}}
     \label{fig:usb_schnittstellen_abstraktion}
 \end{figure}
 
@@ -38,7 +38,7 @@ Softwareseitig wird die Übertragung in drei Ebenen unterteilt, diese sind in \a
 \subsubsection{Endpoints} \label{sssec:endpoints}
 Nach  \acrshort{usb} Spezifikation ist ein endpoint eine eindeutiger adressierbarer Schnittstelle eines \acrshort{usb} Gerätes der Daten senden oder empfangen werden. Ausgenommen ist der control endpoint, dessen Verwendung wird in \autoref{sssec:Konfigurationsvorgang} ausführlicher beschrieben.
 
-Die \acrshort{usb} Spezifikation definiert vier Arten von endpoints mit der maximalen Paketgrö{\ss}e und den unterstützen Übertragungsgeschwindigkeiten. Die Art eines endpoints definiert gleichzeitig die die \k{transfer}-Art aus \fullref{sssec:usb_ueberblick} und sind \cite[Kapitel~8]{usb_developer_guide}:
+Die \acrshort{usb} Spezifikation definiert vier Arten von endpoints mit der maximalen Paketgrö{\ss}e und den unterstützen Übertragungsgeschwindigkeiten. Die Art eines endpoints definiert gleichzeitig die die \k{transfer}-Art aus \fullref{sssec:usb_ueberblick} und sind \autocite[Kapitel~8]{usb_developer_guide}:
 \begin{compactitem}
     \item \textbf{control endpoint} für control Transfers und muss in jedem Gerät vorhanden sein, um Geräteinformation zu übertragen. Die Übertragung sind fehlerbehebend und können, bei High-Speed, bis zu 10\% der Buslast einnehmen.
     \item \textbf{control endpoint} für control Transfers und muss in jedem Gerät vorhanden sein, um Geräteinformation zu übertragen. Die Übertragung sind fehlerbehebend und können, bei High-Speed, bis zu 10\% der Buslast einnehmen.

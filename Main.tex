@@ -1,12 +1,14 @@
 % !TeX root = ./Main.tex
 % !TeX engine = xetex
-% !BIB program = bibtex
+% !BIB program = biber
 
 \documentclass[12pt, oneside, openbib, parskip = full-]{scrartcl}
 
 \input{documentkeys}
 \input{configuration}
 \input{content/glossary_entries}
+
+\addbibresource{citation/quellen.bib}
 
 \begin{document}
 
@@ -28,7 +30,7 @@
 
 \addsec{Literatur}
 \renewcommand{\section}[2]{}
-\bibliography{citation/quellen}
+\printbibliography
 \clearpage
 
 \appendix
@@ -36,7 +38,7 @@
 \appendixpage
 
 \begin{appendices}
-    \include{content/Vorlage_Anhang}
+  \include{content/Vorlage_Anhang}
 \end{appendices}
 
 \end{document}

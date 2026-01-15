@@ -9,6 +9,7 @@
 Main.pdf
 *.bbl
 *.blg
+*.bcf
 *.fdb_latexmk
 *.fls
 *.synctex.gz
