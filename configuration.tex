@@ -1,14 +1,14 @@
 %% KOMA
 
 \usepackage[
-  paper=a4paper,
-  left=25mm,
-  right=25mm,
-  top=25mm,
-  bottom=20mm,
-  includefoot,
-  foot=\baselineskip,
-  bindingoffset=0mm
+    paper=a4paper,
+    left=25mm,
+    right=25mm,
+    top=25mm,
+    bottom=20mm,
+    includefoot,
+    foot=\baselineskip,
+    bindingoffset=0mm
 ]{geometry}
 
 \usepackage[utf8]{inputenc} % encoding
@@ -27,9 +27,9 @@
 \setkomafont{pagination}{}
 
 \KOMAoptions{
-  headsepline = true,
-  footsepline = false,
-  plainfootsepline = false
+    headsepline = true,
+    footsepline = false,
+    plainfootsepline = false
 }
 \renewcommand*{\sectionmarkformat}{}
 
@@ -62,12 +62,12 @@
 % TODO: probably use minted instead, might not be necessary then?
 \usepackage{listings}
 \lstset{
-  basicstyle=\footnotesize, % Global Code Style
-  numbers=left,
-  numberstyle=\tiny,
-  columns=flexible,
-  breaklines=true,
-  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+    basicstyle=\footnotesize, % Global Code Style
+    numbers=left,
+    numberstyle=\tiny,
+    columns=flexible,
+    breaklines=true,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
 }
 % from
 % https://tex.stackexchange.com/questions/303465/higher-asterisks-in-lstlisting-environment
@@ -121,19 +121,19 @@
 \makenoidxglossaries
 
 \usepackage[
-  hidelinks,              % Das Links nicht farbig
-  bookmarks,              % Bookmarks erstellen
-  bookmarksopen,          % Bookmarks bei öffnen des PDF anzeigen
-  bookmarksnumbered,      % damit Nummern in Bookmarks
-  bookmarksopenlevel = 1, % damit nur die erste Ebene der Bookmarks
-  % beim öffnen angezeigt werden
-  pdftoolbar = false,
-  pdfmenubar = false,
-  pdftitle={    \myDocumentType~über~\myTitle~von~\myName},
-  pdfsubject={},
-  pdfkeywords={},
-  pdfauthor = {    \myName},
-  pdfstartpage = {  1}
+    hidelinks,              % Das Links nicht farbig
+    bookmarks,              % Bookmarks erstellen
+    bookmarksopen,          % Bookmarks bei öffnen des PDF anzeigen
+    bookmarksnumbered,      % damit Nummern in Bookmarks
+    bookmarksopenlevel = 1, % damit nur die erste Ebene der Bookmarks
+    % beim öffnen angezeigt werden
+    pdftoolbar = false,
+    pdfmenubar = false,
+    pdftitle={    \myDocumentType~über~\myTitle~von~\myName},
+    pdfsubject={},
+    pdfkeywords={},
+    pdfauthor = {    \myName},
+    pdfstartpage = {  1}
 ]{hyperref}
 
 % set names of references for \autoref (i.e. subsection => "Abschnitt")
@@ -151,9 +151,9 @@
 \renewcommand{\appendixpagename}{Anhang}
 \newcommand{\Appendixautorefname}{Anhang}
 \newcommand*\appendixmore{
-  \clearpage
-  %\addsec{{\appendixname}}%
-  \renewcommand{\thesubsection}{{\Alph{subsection}}}
+    \clearpage
+    %\addsec{{\appendixname}}%
+    \renewcommand{\thesubsection}{{\Alph{subsection}}}
 }
 
 \renewcommand{\k}[1]{\textit{#1}}

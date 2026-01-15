@@ -1,0 +1,5 @@
+wrap = true
+wraplen = 100
+tabsize = 4
+tabchar = "space"
+stdin = true

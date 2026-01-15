@@ -1,57 +1,57 @@
 \begin{titlepage}
-	%
-	\thispagestyle{empty}
-	%   
-	\begin{center}
-		%
-		\begin{minipage}{\textwidth}
-			%
-			\centering
-			\raisebox{-0.5\height}{\includegraphics[width=0.35\textwidth]{content/images/DHBW-Logo.pdf}}
-			\hfill
-			\raisebox{-0.5\height}{\includegraphics[width=0.4\textwidth]{content/images/KY_Logo_New.pdf}}
-			%
-		\end{minipage}
-		%
-		\vspace{1cm}
-		\\
-		\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
-		\rule{\textwidth}{0.4pt}\\[0.2\baselineskip]
-		{\LARGE \myTitle}
-		\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
-		\rule{\textwidth}{1.6pt}
-		\\
-		\vspace*{12mm}{\large \myDocumentType}
-		\\
-		\ifdef{\myBachelorart}{%
-			\vspace*{12mm}	für die Prüfung zum\\%
-			\vspace*{3mm} 	{\large \myBachelorart}\\%
-			\vspace*{12mm}	Studienganges \myStudiengang\\%
-		}{%
-			\vspace*{27mm}des Studiengangs \myStudiengang\\%
-		}
-		%
-		\vspace*{3mm} 	an der \myHochschule\\
-		\vspace*{12mm}	von\\
-		\vspace*{3mm} 	{\large \myName}\\
-		\vspace*{12mm}	\todaysname, der \today \\
-		%
-	\end{center}
-	%
-	\vfill
-	%
-	\begin{spacing}{1.2}
-		\centering
-		%
-		\begin{tabbing}
-			\hspace{0.5\textwidth}                 \= \kill                       \\
-			\f{Matrikelnummer, Kurs}               \>  \myMatrikelnummer, \myKurs \\
-			\f{Ausbildungsfirma}                   \>  \myAusbildungsfirma        \\
-			\f{Betreuer}                           \>  \myErstgutachter           \\
-			\ifdef{\myZweigutachter}{\f{Zweitgutachter} \>  \myZweigutachter\\}{}
-			\f{Bearbeitungszeitraum}               \>  \Bearbeitungszeitraum      \\
-		\end{tabbing}
-		%
-	\end{spacing}
-	%
+    %
+    \thispagestyle{empty}
+    %
+    \begin{center}
+        %
+        \begin{minipage}{\textwidth}
+            %
+            \centering
+            \raisebox{-0.5\height}{\includegraphics[width=0.35\textwidth]{content/images/DHBW-Logo.pdf}}
+            \hfill
+            \raisebox{-0.5\height}{\includegraphics[width=0.4\textwidth]{content/images/KY_Logo_New.pdf}}
+            %
+        \end{minipage}
+        %
+        \vspace{1cm}
+        \\
+        \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+        \rule{\textwidth}{0.4pt}\\[0.2\baselineskip]
+        {\LARGE \myTitle}
+        \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+        \rule{\textwidth}{1.6pt}
+        \\
+        \vspace*{12mm}{\large \myDocumentType}
+        \\
+        \ifdef{\myBachelorart}{%
+            \vspace*{12mm}    für die Prüfung zum\\%
+            \vspace*{3mm}     {\large \myBachelorart}\\%
+            \vspace*{12mm}    Studienganges \myStudiengang\\%
+        }{%
+            \vspace*{27mm}des Studiengangs \myStudiengang\\%
+        }
+        %
+        \vspace*{3mm}     an der \myHochschule\\
+        \vspace*{12mm}    von\\
+        \vspace*{3mm}     {\large \myName}\\
+        \vspace*{12mm}    \todaysname, der \today \\
+        %
+    \end{center}
+    %
+    \vfill
+    %
+    \begin{spacing}{1.2}
+        \centering
+        %
+        \begin{tabbing}
+            \hspace{0.5\textwidth}                 \= \kill                       \\
+            \f{Matrikelnummer, Kurs}               \>  \myMatrikelnummer, \myKurs \\
+            \f{Ausbildungsfirma}                   \>  \myAusbildungsfirma        \\
+            \f{Betreuer}                           \>  \myErstgutachter           \\
+            \ifdef{\myZweigutachter}{\f{Zweitgutachter} \>  \myZweigutachter\\}{}
+            \f{Bearbeitungszeitraum}               \>  \Bearbeitungszeitraum      \\
+        \end{tabbing}
+        %
+    \end{spacing}
+    %
 \end{titlepage}
