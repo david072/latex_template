@@ -57,5 +57,9 @@
                 "pdflatex"
             ]
         },
+    ],
+    "latex-workshop.formatting.tex-fmt.args": [
+        "--config",
+        "%DIR%/tex-fmt.toml"
     ]
 }
