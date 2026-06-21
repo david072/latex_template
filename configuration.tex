@@ -89,16 +89,19 @@
 % \usepackage[abs]{overpic} % adding content on top of images
 
 \usepackage{siunitx}
-% \sisetup{scientific-notation = true}
-\sisetup{exponent-product = \ensuremath{\cdot}}
-\sisetup{product-symbol = \ensuremath{\cdot}}
-\sisetup{detect-all}
-\sisetup{per-mode = symbol}
-\sisetup{locale=DE}
+\sisetup{
+    % scientific-notation=true,
+    exponent-product=\ensuremath{\cdot},
+    product-symbol=\ensuremath{\cdot},
+    detect-all,
+    per-mode=fraction,
+    mode=text,
+    locale=DE
+}
 \usepackage{eurosym}
 \DeclareSIUnit{\sieuro}{\mbox{\euro}}
 
-% \usepackage[colorinlistoftodos,prependcaption,textsize=footnotesize]{todonotes}
+\usepackage{todonotes}
 
 \usepackage{adjustbox} % interface to transform latex content
 \usepackage{subcaption}
